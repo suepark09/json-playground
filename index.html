@@ -8,32 +8,42 @@
 <script>
 $(function() {
 
-  // User clicks the "getData" button
-  $("#getData").click(function() {
+//   // User clicks the "getData" button
+//   $("#getData").click(function() {
   
-    // Put artistList element and JSON file location into a variable
-    var artistList = $("#artistList");
-    var url = "artists.txt";
+//     // Put artistList element and JSON file location into a variable
+//     var artistList = $("#artistList");
+//     var url = "artists.txt";
 
-    // Get the JSON file
-    $.getJSON(url, function(data) {
+//     // Get the JSON file
+//     $.getJSON(url, function(data) {
 
-      // Put artist info into a variable
-      var artists = data.artists.map(function(item) {
-        return item.artistname + " (" + item.born + ")";
-      });
+//       // Put artist info into a variable
+//       var artists = data.artists.map(function(item) {
+//         return item.artistname + " (" + item.born + ")";
+//       });
       
-      // Remove all child nodes (including text nodes) 
-      artistList.empty();
+//       // Remove all child nodes (including text nodes) 
+//       artistList.empty();
 
-      // Format artists with HTML tags 
-      if (artists.length) {
-        var content = "<li>" + artists.join("</li><li>") + "</li>";
-        var list = $("<ul>").html(content);
-        artistList.append(list);
-      }
-    });
-  });
+//       // Format artists with HTML tags 
+//       if (artists.length) {
+//         var content = "<li>" + artists.join("</li><li>") + "</li>";
+//         var list = $("<ul>").html(content);
+//         artistList.append(list);
+//       }
+//     });
+//   });
+
+$("getData").click(function() {
+    let artistList = $("#artistList")
+    let url = "artists.txt"
+
+    $.getJSON(url, function() {
+        let artist = 
+
+    })
+})
 });
 </script>
 
